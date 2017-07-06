@@ -1,0 +1,2 @@
+# Correctness-DrivenDevelopment
+Have you heard of Correctness-Driven Development? Perhaps not. But no worries because it is a term recently coined by myself and an associate as a concept that removes much of the misunderstanding associated with Behavior-Driven Development (BDD) and Test-Driven Development (TDD). The goal of both practices is really quite simple, define correctness before writing code.
