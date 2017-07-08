@@ -1,6 +1,6 @@
 > Have you heard of Correctness-Driven Development?
 
-Perhaps not, but no worries. It is a term recently coined by myself and a fellow engineer as a concept that removes much of the misunderstanding associated with Behavior-Driven Development (BDD) and Test-Driven Development (TDD). The goal of both practices is really quite simple, define correctness before writing code.
+Perhaps not, but no worries. It is a term recently coined by myself and a fellow software engineer as a concept that removes much of the misunderstanding associated with Behavior-Driven Development (BDD) and Test-Driven Development (TDD). The goal of both practices is really quite simple, define correctness before writing code.
 
 > **True story**: _A few years back I’m chatting with a Dev Manager whose team I had previously coached. Naturally, this conversation occurred at a water cooler, coffee station, soda machine – take your pick. I asked, “how’s the project progressing?” He replied, “challenging … we’re way behind schedule”. I asked, “so what are you going to do about it?” He says, “I’m going to cut back on testing …” I waited for him to laugh and say he was joking. The look in his eyes indicated that he was dead serious._
 
