@@ -8,8 +8,7 @@ The web app, Correctness-DrivenDevelopment.com, is comprised of an informational
 
 As a project we will use BDD and TDD as a connected cycle to expose an existing batch payroll application to the network, for access by applications, browsers and mobile devices. This project is real-world; exposing legacy applications to the network is a typical challenge that many enterprises encounter when needing to extending the life of critical business applications. We will create a ReSTful API wrapper for the payroll application and the required modifications of the payroll application; where all coding for this project will be performed in a manner where no code is written unless first coerced by a test. 
 
-Naturally one might ask why perform BDD or even TDD. Isn’t unit testing and manual testing sufficient?
+Naturally one might ask why perform BDD or even TDD. Isn’t unit testing and manual testing sufficient? 
 
-> **Another true story**: _I recently conducted a series of full day TDD workshop for an enterprise with numerous legacy Java applications that contained some tests, written after the code was developed._
-
+> **Another true story**: _I recently conducted a series of full day TDD workshops for an organization. They have a java tech-stack with numerous legacy applications. I observed that many of the applications contained no more than 15% test coverage, and was informed that tests were largely written after the code was developed. The Developer opinion on unit testing was generally that effort.  The Tester opinion on test automation was it seems beneficial but QA doesn’t code and doesn’t work closely with the developers. And Management, well … they indicated that adhering to Delivery Dates was critical to the organization, further stating “we see the need to change how we test but planning for it takes too much time.”   See [Organizational Dysfunctions on Testing] (https://github.com/Bill-A/Correctness-DrivenDevelopment/wiki/0:-Organizational-Dysfunctions-on-Testing) for a collection of examples of Organizational Dysfunctions on Testing _
 
