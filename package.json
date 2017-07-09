@@ -1,0 +1,44 @@
+{
+  "name": "mpayroll",
+  "version": "1.0.0",
+  "description": "An open-source project to expose the benefits of software development combining BDD (Behavior-Driven Development) and TDD (Test-Driven Development).",
+  "main": "src/main/node/mpayroll.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "cucumber": "node_modules/.bin/cucumber-js features/ -r steps/",
+    "dev": "nodemon src/server_mpayrollAPI.js",
+    "start": "node src/server_mpayrollAPI.js",
+    "test": "NODE_ENV=test node_modules/.bin/mocha --recursive test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bill-A/Correctness-DrivenDevelopment.git"
+  },
+  "keywords": [
+    "BDD",
+    "TDD",
+    "jUnit",
+    "mocha",
+    "cucumber"
+  ],
+  "author": "Bill Allen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bill-A/Correctness-DrivenDevelopment/issues"
+  },
+  "homepage": "https://github.com/Bill-A/Correctness-DrivenDevelopment#readme",
+  "dependencies": {
+    "hapi": "^16.1.1",
+    "mongoose": "^4.10.2",
+    "mysql": "^2.13.0",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "cucumber": "^2.3.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.4.1"
+  }
+}
