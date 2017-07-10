@@ -7,10 +7,15 @@
     "test": "test"
   },
   "scripts": {
-    "cucumber": "node_modules/.bin/cucumber-js features/",
+    "feature-test": "node_modules/.bin/cucumber.js features/",
     "dev": "nodemon src/server_mpayrollAPI.js",
     "start": "node src/server_mpayrollAPI.js",
     "test": "NODE_ENV=test node_modules/.bin/mocha --recursive test/"
+  },
+  "bin": {
+    "cucumber.js": "node_modules/.bin/cucumber.js",
+    "cucumber-js": "node_modules/.bin/cucumber.js",
+    "cucumberjs": "node_modules/.bin/cucumber.js"
   },
   "repository": {
     "type": "git",
