@@ -6,7 +6,6 @@ Use Given, When, Then.
 
 let request = require('request');
 
-
 const {defineSupportCode} = require('cucumber');
 
 defineSupportCode(function({Given, Then, When}) {
