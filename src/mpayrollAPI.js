@@ -24,7 +24,6 @@ server.route({
         //Inform requester of success
         return reply('1234').code(201);
     }
-
 });
 
 server.start((err)=> {
