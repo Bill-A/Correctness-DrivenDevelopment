@@ -20,10 +20,16 @@ server.route({
         console.log('pathname: ',request.url.pathname);
         console.log('payload: ',request.payload);
 
+        if (request.payload){
+            //Inform requester of success
+            return reply('1234').code(201);
+        }
+        else {
+            return reply('').code(400);
+        }
 
-        //Inform requester of success
-        return reply('1234').code(201);
     }
+
 });
 
 server.start((err)=> {
