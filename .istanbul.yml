@@ -1,0 +1,7 @@
+instrumentation:
+  root: ./node_modules/.bin/istanbul
+  include-all-sources: true
+  verbose: true
+  excludes: ['public/**', 'test/**', 'node_modules/**']
+reporting:
+  dir: 'test/coverage/report'

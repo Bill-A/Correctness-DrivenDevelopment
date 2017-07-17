@@ -3,7 +3,7 @@ var chakram = require('chakram'),
 
 describe("mPayroll API", function() {
     const empRec = {
-        "name": 'Harry Hourly',
+        "name": 'Hillary Hourly',
         "type": 'H',
         "rate": '10.00'
     };
