@@ -7,10 +7,11 @@
     "test": "test"
   },
   "scripts": {
+    "coverage": "NODE_ENV=test ./node_modules/.bin/istanbul cover  --include-all-sources ./node_modules/.bin/_mocha -- test/**/*.js",
     "feature-test": "node_modules/.bin/cucumber.js features/",
     "dev": "nodemon src/mpayrollAPI.js",
     "start": "node src/mpayrollAPI.js",
-    "test": "NODE_ENV=test node_modules/.bin/mocha --recursive test/"
+    "test": "NODE_ENV=test node_modules/.bin/_mocha --recursive test/unit/"
   },
   "bin": {
     "cucumber.js": "node_modules/.bin/cucumber.js",
@@ -35,16 +36,15 @@
   },
   "homepage": "https://github.com/Bill-A/Correctness-DrivenDevelopment#readme",
   "dependencies": {
-    "hapi": "^16.1.1",
-    "mongoose": "^4.10.2",
-    "mysql": "^2.13.0",
+    "hapi": "^16.4.3",
+    "mongoose": "^4.11.3",
     "request": "^2.81.0"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
+    "chai": "^4.1.0",
     "chakram": "^1.5.0",
     "cucumber": "^2.3.1",
     "istanbul": "^0.4.5",
-    "mocha": "^3.4.1"
+    "mocha": "^3.4.2"
   }
 }
