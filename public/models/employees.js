@@ -1,32 +1,38 @@
-// Require mongoose
-var mongoose = require("mongoose");
+// Require mongoose custom validation package
+let mongoose = require('mongoose');
+
 // Create Schema class
-var Schema = mongoose.Schema;
+let Schema = mongoose.Schema;
 
 // Create employee schema
-var EmployeeSchema = new Schema({
-  // name is a required string
-  name: {
-    type: String,
-    required: true
-  },
-  // type is a required string
-  type: {
-      type: String,
-      required: true
-  },
-  // rate is a required string
-  rate: {
-    type: Number,
-    required: true,
-  },
+let EmployeeSchema = new Schema({
+    name: {
+        type: String,
+        required: true
+
+        // required: [true, 'Must have a name entered']
+    },
+    type: {
+        type: String,
+        required: true
+
+        // enum: ['H', 'S', 'C'],
+        // required: [true, 'Must be \'H\', \'S\', \'C\'']
+    },
+    rate: {
+        type: Number,
+        // min: [0.01, 'Must be a positive value'],
+        required: true
+    },
 },
 {
-    timestamps: true
+    retainKeyOrder: true,
+    timestamps: true,
 });
 
-// Create the Article model with the ArticleSchema
-var Employee = mongoose.model("Employee", EmployeeSchema);
+// Create the Employee model with the EmployeeSchema
+let Employee = mongoose.model('Employee', EmployeeSchema);
+
 
 // Export the model
 module.exports = Employee;

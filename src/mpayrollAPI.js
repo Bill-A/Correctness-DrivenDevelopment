@@ -2,8 +2,7 @@ const Hapi = require("hapi");
 const port = 3000;
 const ip = 'localhost';
 const server = new Hapi.Server();
-const cp  = require('child_process');
-let n;
+let processPayrollRecord = require( '../lib/payroll.js');
 
 server.connection({
     host: ip,
@@ -20,21 +19,16 @@ server.route({
         console.log(new Date(Date.now()).toLocaleString(), '- mPayroll API, pathname: ',request.url.pathname);
         console.log(new Date(Date.now()).toLocaleString(), '- mPayroll API, payload: ',request.payload);
 
-        //Send the employee payload to the payroll application
-        if (request.payload){
+        // Send the employee payload to the payroll application
+        processPayrollRecord(request.payload).then(function(status){
+            if (status === 201){
+                return reply('1234').code(201);
+            }
+            else {
+                return reply('').code(400);
+            }
+        })
 
-            n.send(request.payload);
-
-            n.on('message', (m) => {
-                console.log(new Date(Date.now()).toLocaleString(), '- mPayroll API, message from payroll application: ', m);
-            });
-
-            //Inform requester of success
-            return reply('1234').code(201);
-        }
-        else {
-            return reply('').code(400);
-        }
     }
 });
 
@@ -46,6 +40,4 @@ server.start((err)=> {
         throw err;
     }
     console.log(new Date(Date.now()).toLocaleString(), `- mPayroll API, running at: ${server.info.uri}`);
-    n  = cp.fork(`${__dirname}/payroll.js`);
-
 });

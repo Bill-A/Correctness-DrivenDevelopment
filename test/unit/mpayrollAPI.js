@@ -1,11 +1,11 @@
-var chakram = require('chakram'),
+let chakram = require('chakram'),
     expect = chakram.expect;
 
 describe("mPayroll API", function() {
     const empRec = {
-        "name": 'Hillary Hourly',
-        "type": 'H',
-        "rate": '10.00'
+        'name': 'Mallory Hourly',
+        'type': 'H',
+        'rate': '15.00'
     };
 
     it("should have POST employees endpoint", function () {
