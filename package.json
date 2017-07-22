@@ -36,6 +36,7 @@
   },
   "homepage": "https://github.com/Bill-A/Correctness-DrivenDevelopment#readme",
   "dependencies": {
+    "bluebird": "^3.5.0",
     "hapi": "^16.4.3",
     "mongoose": "^4.11.3",
     "request": "^2.81.0"
@@ -44,6 +45,8 @@
     "chai": "^4.1.0",
     "chakram": "^1.5.0",
     "cucumber": "^2.3.1",
+    "eslint": "^4.2.0",
+    "eslint-plugin-react": "^7.1.0",
     "istanbul": "^0.4.5",
     "mocha": "^3.4.2"
   }

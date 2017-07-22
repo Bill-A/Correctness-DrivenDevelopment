@@ -1,29 +1,36 @@
-const chai = require('chai');
-const expect = chai.expect;
-const cp  = require('child_process');
-let n;
-
+let chai = require('chai');
+let expect = require('chai').expect;
+let processPayrollRecord = require( '../../lib/payroll.js');
 
 describe('payroll application', function() {
+    let result;
 
-    it('should be forked', function(done) {
-        this.timeout(4000);
-
-        n = cp.fork('src/payroll.js');
-        expect(n.connected).to.equal(true);
-        done();
-    });
-
-    it('should process addRec transactions', function(done) {
-        this.timeout(4000);
-
-        n = cp.fork('src/payroll.js');
-        n.send({"name":"Howard Hourly","type":"H","rate":"11.00"});
-
-        n.on('message', (m) => {
-            expect(m).to.deep.equal({ status: 201 });
+    it('should be invalid if name is empty', function(done) {
+        processPayrollRecord({'type':'H','rate':11.00}).then(function(result){
+            expect(result).to.equal(400);
             done();
         });
-
     });
+
+    it('should be invalid if type is empty', function(done) {
+        processPayrollRecord ({'name':'Phillip Hourly','rate':11.00}).then(function(result){
+            expect(result).to.equal(400);
+            done();
+        });
+    });
+
+    it('should be invalid if rate is empty', function(done) {
+        processPayrollRecord ({'name':'Phillip Hourly','type':'H'}).then(function(result){
+            expect(result).to.equal(400);
+            done();
+        });
+    });
+
+    it('should add valid Employee records', function(done) {
+        processPayrollRecord ({'name':'Phillip Hourly','type':'H','rate':11.00}).then(function(result){
+            expect(result).to.equal(201);
+            done();
+        });
+    });
+
 });
