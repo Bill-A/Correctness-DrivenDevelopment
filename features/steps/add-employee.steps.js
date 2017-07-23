@@ -6,6 +6,7 @@ Use Given, When, Then.
 
 
 let request = require('request');
+let submitResult = 0;
 
 const {defineSupportCode} = require('cucumber');
 
@@ -54,6 +55,7 @@ defineSupportCode(function({Given, Then, When}) {
                 }
                 else {
                     callback();
+                    submitResult = response.statusCode; // explain need for this as a state variable
                 }
             }
         });
@@ -61,7 +63,14 @@ defineSupportCode(function({Given, Then, When}) {
 
     Then('A new hourly employee is Created', function (callback) {
         // Write code here that turns the phrase above into concrete actions
-        callback(null, 'pending');
+
+        if (submitResult === 201){
+            callback();
+        }
+        else{
+            console.log('new hourly employee not Created, error:', response.statusCode);
+            callback(null, 'pending');
+        }
     });
 
 });
