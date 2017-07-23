@@ -3,9 +3,9 @@ let chakram = require('chakram'),
 
 describe("mPayroll API", function() {
     const empRec = {
-        'name': 'Mallory Hourly',
+        'name': 'mPayrollAPI Hourly',
         'type': 'H',
-        'rate': '15.00'
+        'rate': '14.00'
     };
 
     it("should have POST employees endpoint", function () {
