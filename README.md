@@ -1,16 +1,53 @@
-> Have you heard of Correctness-Driven Development?
+## Problem Statement
+Herein we explore the benefits of software development combining Behavior-Driven Development (BDD) and Test-Driven Development (TDD) where no code is written unless first coerced by a test (or written behavior).
 
-Perhaps not, but no worries. It's a term recently coined by myself and a fellow software engineer as a concept that removes much of the misunderstanding associated with Behavior-Driven Development (BDD) and Test-Driven Development (TDD). The goal of both practices is really quite simple, define correctness before writing code.
+We apply these concepts to a real-world challenge that many enterprises encounter -- the need to extend the life of critical business applications by exposing it over a network for access by services, mobile devices and browsers. We will create a ReSTful API wrapper for the payroll application and the required modifications of the payroll application; where all coding for this project will be performed in a manner where no code is written unless first coerced by a test. 
+ 
+## A First Look at Using BDD and TDD 
+![Using BDD and TDD, Explained!](https://youtu.be/O8yB1HazvUw)
+ 
+## Existing Application (hypothetical)
+The existing application is based on Bob Martin's Payroll Case Study, as detailed in Agile Software Development - Principles, Patterns and Practices. We have taken liberty to reimagine the Bob Martin case study as follows:
 
-> **True story**: _A few years back I’m chatting with a Dev Manager whose team I had previously coached. Naturally, this conversation occurred at a water cooler, coffee station, soda machine – take your pick. I asked, “how’s the project progressing?” He replied, “challenging … we’re way behind schedule”. I asked, “so what are you going to do about it?” He says, “I’m going to cut back on testing …” I waited for him to laugh and say he was joking. The look in his eyes said it all, he was dead serious._
+1. it is a java application
+1. business logic library was written in 2004 to support a fat client desktop application.
+1. payroll records are formatted as XML
+1. there were no unit tests in the 2004 application
+1. tests were 100% manual
+1. in 2008, the business logic code was extracted and used to power a Spring MVC web app
+1. the Spring MVC rewrite has about 15% unit test coverage; unit tests were written after code and are viewed as not beneficial (ie getters and setters)
 
-The web app, Correctness-DrivenDevelopment.com, is comprised of an informational web site, instructional videos and a software repo filled with tests and code. Collectively, these assets are used to provide Technical Coaching to teams on the what and how of Behavior-Driven Development (BDD) and Test-Driven Development (TDD). In our workshops and trainings, teams will come to understand that TDD is **not** a developer testing and that BDD is **not** the business writing tests. Instead TDD is a developer designing.  And BDD engages the business to drive design based upon business’ vision of the system’s behaviors. Along the way we may even explore the connection that TDD/BDD has to Acceptance Test-Driven Development (ATDD).  
+## Requirements for the Web App
+We will create a ReSTful API wrapper for an existing payroll application. And we will make the required modifications to the payroll application. 
 
-As a vehicle to explore BDD and TDD as connected cycles, we will expose an existing batch payroll application to the network, for access by applications, browsers and mobile devices. This project is real-world; exposing legacy applications to the network is a typical challenge that many enterprises encounter when needing to extending the life of critical business applications. We will create a ReSTful API wrapper for the payroll application and the required modifications of the payroll application; where all coding for this project will be performed in a manner where no code is written unless first coerced by a test. 
+The web app enables easy access to the followiing: add employees, timesheets, pay slips, vacation time, sick time and other important information anytime, anywhere and from any authenticated device in the network. Additionally, it should include these features:
 
-Naturally one might ask why perform BDD or even TDD. Isn’t manual testing  and unit testing sufficient? 
+1. developed using BDD and TDD
+1. RESTful API
+1. user authentication
+1. role based authorization
+1. real time data entry
+1. data validation
+1. audit logging
+1. enter timesheets
+1. view status of vacation time, sick time
+1. historical view of timesheets and payslips
 
-> **Another true story**: _I recently conducted a series of full day TDD workshops for an organization. They have a java tech-stack with numerous legacy applications. I observed that many of the applications contained no more than 15% test coverage, and was informed that tests were largely written after the code was developed. The Developer opinion on unit testing was generally that it was difficult or not worth the effort.  The Tester opinion on test automation was it seems beneficial but QA doesn’t code and doesn’t work closely with the developers. And Management, well … they indicated that adhering to Delivery Dates was critical to the organization, further stating “we see the need to change how we test but planning for it takes too much time.”   
-See https://github.com/Bill-A/Correctness-DrivenDevelopment/wiki/0:-Organizational-Dysfunctions-on-Testing for a running collection of examples we've experienced with Organizational Dysfunctions on Testing._
 
-Software testing, as implemented in many organizations, is wildly out of sync with software development. Just consider how beneficial it would be if whenever a new feature is added to the system there existed a test environment, already set up, which can be run with a single command to figure out whether a new feature introduces new bugs. That is but one of the byproducts of implementing BDD and TDD.
+## Features for Release 2
+1. parameter driven deductions
+1. interface to transmit payroll data to Quickbooks Pro
+1. full legislative compliance
+1. multi-company and location support
+1. multi pay group and pay cycle
+
+## History of the Payroll System
+![circa 2004](https://github.com/Bill-A/Correctness-DrivenDevelopment/blob/master/public/assets/images/Payroll_mPayroll_2004.png)
+![circa 2008](https://github.com/Bill-A/Correctness-DrivenDevelopment/blob/master/public/assets/images/Payroll_mPayroll_2008.png)
+![circa 2017](https://github.com/Bill-A/Correctness-DrivenDevelopment/blob/master/public/assets/images/Payroll_to_mPayroll_2017_V4.png)
+
+
+## Getting started
+Visit our quick-start guide for setting, using and contributing to mpayroll.
+
+More: [Setup for mPayroll](https://github.com/Bill-A/Correctness-DrivenDevelopment/wiki/3:---Setup-for-mPayroll)
