@@ -4,7 +4,7 @@ Herein we explore the benefits of software development combining Behavior-Driven
 We apply these concepts to a real-world challenge that many enterprises encounter -- the need to extend the life of critical business applications by exposing it over a network for access by services, mobile devices and browsers. We will create a ReSTful API wrapper for the payroll application and the required modifications of the payroll application; where all coding for this project will be performed in a manner where no code is written unless first coerced by a test. 
  
 ## A First Look at Using BDD and TDD 
-![Using BDD and TDD, Explained!](https://www.youtube.com/watch?v=I0EUOpK28VA)
+[Using BDD and TDD, Explained!](https://www.youtube.com/watch?v=I0EUOpK28VA)
  
 ## Existing Application (hypothetical)
 The existing application is based on Bob Martin's Payroll Case Study, as detailed in Agile Software Development - Principles, Patterns and Practices. We have taken liberty to reimagine the Bob Martin case study as follows:
