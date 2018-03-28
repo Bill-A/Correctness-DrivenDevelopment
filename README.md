@@ -8,7 +8,6 @@ We apply these concepts to a real-world challenge that many enterprises encounte
 ![Using BDD and TDD, Explained!](https://github.com/Bill-A/Correctness-DrivenDevelopment/blob/master/public/assets/images/BDD_TDD.jpg)
 
 [Play the movie](https://www.youtube.com/watch?v=I0EUOpK28VA)
-
  
 ## Existing Application (hypothetical)
 The existing application is based on Bob Martin's Payroll Case Study, as detailed in Agile Software Development - Principles, Patterns and Practices. We have taken liberty to reimagine the Bob Martin case study as follows:
